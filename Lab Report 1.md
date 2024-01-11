@@ -10,7 +10,7 @@ output:
 ```
 [user@sahara ~]$
 ```
-1. Now the working directory is "home". When put no arguments after ` cd `, it  changes nothing. I believe it is not an error, but because I give `cd` no directory, it just stays where it is.
+1. Now the working directory is "home". When I put no arguments after ` cd `, it  changes nothing, and the working directory shown in the next line of the terminal is still /home. I have this output because I put no path after ` cd ` which tells the filesystem to stay where it is. It is not an error.
 
 input:
 ```
@@ -20,7 +20,7 @@ output:
 ```
 [user@sahara ~/lecture1]$
 ```
-2. Now the working directory is still "home." When I put directory "lecture1" after `cd`, the path showing the next line in the terminal changes to `[user@sahara ~/lecture1]` showing the working directory changed to lecture 1. Thus, it is not an error.
+2. Now the working directory is still "home." When I put directory "lecture1" after `cd`, the path showing the next line in the terminal changes to `[user@sahara ~/lecture1]` showing the working directory changed to lecture 1. I have this output because `cd` has moved my working directory from /home to /lecture1 by executing the path I put after `cd`. Thus, it is not an error.
 
 input:
 ```
@@ -31,7 +31,7 @@ output:
 bash: cd: Hello.java: Not a directory
 ```
 
-3. Now the working directory is "lecture1", when I put the file "Hello.java" after `cd`, it reports an error that `bash: cd: Hello.java: Not a directory` because Hello.java is not a directory that it is not possible to be used as a working directory
+3. Now the working directory is "lecture1", when I put the file "Hello.java" after `cd`, it reports an **error** that `bash: cd: Hello.java: Not a directory` because Hello.java is not a directory that it is not possible to be used as a working directory
 
 
 ## Examples with ls
@@ -46,7 +46,7 @@ output:
 ```
 Hello.java  messages  README
 ```
-1. The working directory here is "lecture1". When I run `ls` in the command, it simply shows all the files and folders in "lecture1". Thus, it is not an error.
+1. The working directory here is "lecture1". When I run `ls` in the command, it simply shows all the files and folders in "lecture1". I get this output because `ls` lists all the files and folders in the current working directory when I put no argument after it. Thus, it is not an error.
 
 input:
 ```
@@ -56,7 +56,7 @@ output:
 ```
 en-us.txt  es-mx.txt  zh-cn.txt
 ```
-2. The working directory is "lecture1". When I run `ls` with the directory "messages," it shows all the files inside of "messages." It is not an error.
+2. The working directory is "lecture1". When I run `ls` with the directory "messages," it shows all the files inside of "messages." I get this output because `ls` lists all the files and folders in the given path which is "messages." Thus, it is not an error.
 
 input:
 ```
@@ -66,7 +66,7 @@ output:
 ```
 Hello.java
 ```
-3. The working directory is "lecture1". When I run `ls` with file "Hello.java," it just repeats the file name "Hello.java" because there is no file "inside" of "Hello.java," and it just simply repeats the file name. It is not an error. 
+3. The working directory is "lecture1". When I run `ls` with file "Hello.java," it just repeats the file name "Hello.java" I get this output because there is no file "inside" of "Hello.java," and it just simply repeats the file name. It is not an error. 
 
 
 ## Examples with cat
@@ -80,7 +80,7 @@ input:
 output:
 ```
 ```
-1. The working directory here is "lecture1". When I run `cat` with no argument, it appears nothing and didn't end the conversation. It is not an error, but the terminal will just repeat what you type in.
+1. The working directory here is "lecture1". When I run `cat` with no argument, it appears to be nothing and doesn't end the conversation. I get this output is because I tell the filesystem nothing to print since I put no argument after `cat`. It is not an error, but the terminal will just repeat what you type in.
 
 input：
 ```
@@ -90,7 +90,7 @@ output:
 ```
 cat: messages: Is a directory
 ```
-2. The working directory here is "lecture1". When I run `cat` with directory "messages," it shows an error saying, "cat: messages: Is a directory." This is because the cat is used to "catenate" and show the exact content in a file. However, the directory "messages" contains more files instead of the exact content that can be shown. Thus, it becomes an error.
+2. The working directory here is "lecture1". When I run `cat` with directory "messages," it shows an error saying, "cat: messages: Is a directory." I got this output because  `cat` is used to "catenate" and show the exact content in a file. However, the directory "messages" contains more files instead of the exact content that can be shown. Thus, it becomes an **error**.
 
 input:
 ```
@@ -109,5 +109,5 @@ public class Hello {
     System.out.println(content);
   }
 ```
-3. The working directory here is "lecture1". When I run `cat` with the file "Hello.java," it reads the file and prints the code to the terminal. Thus, it is not an error.
+3. The working directory here is "lecture1". When I run `cat` with the file "Hello.java," it reads the file and prints the code to the terminal. I get this output because `cat` reads the file Hello.java, which is the path I put as an argument. Thus, it is not an error.
 
