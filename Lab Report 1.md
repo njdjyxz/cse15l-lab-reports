@@ -5,8 +5,9 @@ input:
 ```
 output:
 ```
+[user@sahara ~]$
 ```
-1. Now the working directory is "home". When put no arguments after ` cd `, it appears and changes nothing. I believe it is not an error, but because I give `cd` no directory, it just stays where it is.
+1. Now the working directory is "home". When put no arguments after ` cd `, it  changes nothing. I believe it is not an error, but because I give `cd` no directory, it just stays where it is.
 
 input:
 ```
