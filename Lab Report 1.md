@@ -1,6 +1,6 @@
 ## Examples with cd
 ![Image](3.PNG)
-1. Now the working directory is "home". When put no arguments after ` cd `, it appears and changes nothing. I believe it is not an error. but because I give cd no directory, it just stays where it is.
+1. Now the working directory is "home". When put no arguments after ` cd `, it appears and changes nothing. I believe it is not an error. but because I give `cd` no directory, it just stays where it is.
 2. Now the working directory is still "home." When I put directory "lecture1" after cd, the path showing the next line in the terminal changes to "[user@sahara ~/lecture1]" showing the working directory changed to lecture 1. Thus, it is not an error.
 3. Now the working directory is "lecture1", when I put the file "Hello.java" after cd, it reports an error that "bash: cd: Hello.java: Not a directory" because Hello.java is not a directory that it is not possible to be a working directory
 
