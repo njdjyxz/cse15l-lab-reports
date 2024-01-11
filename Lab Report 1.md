@@ -32,19 +32,73 @@ bash: cd: Hello.java: Not a directory
 
 
 ## Examples with ls
-![Image](1.PNG)
-
+input:
+```
+[user@sahara ~/lecture1]$ ls
+```
+output:
+```
+Hello.java  messages  README
+```
 1. The working directory here is "lecture1". When I run `ls` in the command, it simply shows all the files and folders in "lecture1". Thus, it is not an error.
+
+input:
+```
+[user@sahara ~/lecture1]$ ls messages
+```
+output:
+```
+en-us.txt  es-mx.txt  zh-cn.txt
+```
 2. The working directory is "lecture1". When I run `ls` with the directory "messages," it shows all the files inside of "messages." It is not an error.
+
+input:
+```
+[user@sahara ~/lecture1]$ ls Hello.java
+```
+output:
+```
+Hello.java
+```
 3. The working directory is "lecture1". When I run `ls` with file "Hello.java," it just repeats the file name "Hello.java" because there is no file "inside" of "Hello.java," and it just simply repeats the file name. It is not an error. 
 
 
 ## Examples with cat
-![Image](2.PNG)
-
-**I did the last two questions in code first**
-
+input:
+```
+[user@sahara ~/lecture1]$ cat
+```
+output:
+```
+```
 1. The working directory here is "lecture1". When I run `cat` with no argument, it appears nothing and didn't end the conversation. It is not an error, but the terminal will just repeat what you type in.
+
+input：
+```
+[user@sahara ~/lecture1]$ cat messages
+```
+output:
+```
+cat: messages: Is a directory
+```
 2. The working directory here is "lecture1". When I run `cat` with directory "messages," it shows an error saying, "cat: messages: Is a directory." This is because the cat is used to "catenate" and show the exact content in a file. However, the directory "messages" contains more files instead of the exact content that can be shown. Thus, it becomes an error.
+
+input:
+```
+[user@sahara ~/lecture1]$ cat Hello.java
+```
+output:
+```
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Path;
+
+public class Hello {
+  public static void main(String[] args) throws IOException {
+    String content = Files.readString(Path.of(args[0]), StandardCharsets.UTF_8);    
+    System.out.println(content);
+  }
+```
 3. The working directory here is "lecture1". When I run `cat` with the file "Hello.java," it reads the file and prints the code to the terminal. Thus, it is not an error.
 
