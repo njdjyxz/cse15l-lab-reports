@@ -1,4 +1,7 @@
 ## Examples with cd
+
+![Image](cd.png)
+
 input:
 ```
 [user@sahara ~]$ cd
@@ -32,6 +35,9 @@ bash: cd: Hello.java: Not a directory
 
 
 ## Examples with ls
+
+![Image](ls.png)
+
 input:
 ```
 [user@sahara ~/lecture1]$ ls
@@ -64,6 +70,9 @@ Hello.java
 
 
 ## Examples with cat
+
+![Image](cat.png)
+
 input:
 ```
 [user@sahara ~/lecture1]$ cat
