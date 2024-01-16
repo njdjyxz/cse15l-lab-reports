@@ -1,7 +1,8 @@
-## Examples with cd
+# Examples with cd
 
 ![Image](cd.png)
 
+## cd with no argument
 input:
 ```
 [user@sahara ~]$ cd
@@ -10,7 +11,12 @@ output:
 ```
 [user@sahara ~]$
 ```
-1. Now the working directory is "home". When I put no arguments after ` cd `, it  changes nothing, and the working directory shown in the next line of the terminal is still /home. I have this output because I put no path after ` cd ` which tells the filesystem to stay where it is. It is not an error.
+* Now the working directory is "home".
+* When I put no arguments after ` cd `, it  changes nothing, and the working directory shown in the next line of the terminal is still /home. I have this output because I put no path after ` cd ` which tells the filesystem to stay where it is.
+* It is not an error.
+
+___
+## cd with a path to a directory
 
 input:
 ```
@@ -20,7 +26,12 @@ output:
 ```
 [user@sahara ~/lecture1]$
 ```
-2. Now the working directory is still "home." When I put directory "lecture1" after `cd`, the path showing the next line in the terminal changes to `[user@sahara ~/lecture1]` showing the working directory changed to lecture 1. I have this output because `cd` has moved my working directory from /home to /lecture1 by executing the path I put after `cd`. Thus, it is not an error.
+* Now the working directory is still "home."
+* When I put directory "lecture1" after `cd`, the path showing the next line in the terminal changes to `[user@sahara ~/lecture1]` showing the working directory changed to lecture 1. I have this output because `cd` has moved my working directory from /home to /lecture1 by executing the path I put after `cd`.
+* Thus, it is not an error.
+
+___
+## cd with a path to a file 
 
 input:
 ```
@@ -31,7 +42,9 @@ output:
 bash: cd: Hello.java: Not a directory
 ```
 
-3. Now the working directory is "lecture1", when I put the file "Hello.java" after `cd`, it reports an **error** that `bash: cd: Hello.java: Not a directory` because Hello.java is not a directory that it is not possible to be used as a working directory
+* Now the working directory is "lecture1".
+* When I put the file "Hello.java" after `cd`, it reports an **error** that `bash: cd: Hello.java: Not a directory` because Hello.java is not a directory that it is not possible to be used as a working directory.
+* It is an error.
 
 
 ## Examples with ls
