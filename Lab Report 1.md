@@ -3,6 +3,7 @@
 ![Image](cd.png)
 
 ## cd with no argument
+
 input:
 ```
 [user@sahara ~]$ cd
@@ -47,9 +48,11 @@ bash: cd: Hello.java: Not a directory
 * It is an error.
 
 
-## Examples with ls
+# Examples with ls
 
 ![Image](ls.png)
+
+# ls with no argument
 
 input:
 ```
@@ -59,7 +62,13 @@ output:
 ```
 Hello.java  messages  README
 ```
-1. The working directory here is "lecture1". When I run `ls` in the command, it simply shows all the files and folders in "lecture1". I get this output because `ls` lists all the files and folders in the current working directory when I put no argument after it. Thus, it is not an error.
+
+* The working directory here is "lecture1".
+* When I run `ls` in the command, it simply shows all the files and folders in "lecture1". I get this output because `ls` lists all the files and folders in the current working directory when I put no argument after it.
+* Thus, it is not an error.
+
+___
+# ls with a path to a directory
 
 input:
 ```
@@ -69,7 +78,13 @@ output:
 ```
 en-us.txt  es-mx.txt  zh-cn.txt
 ```
-2. The working directory is "lecture1". When I run `ls` with the directory "messages," it shows all the files inside of "messages." I get this output because `ls` lists all the files and folders in the given path which is "messages." Thus, it is not an error.
+
+* The working directory is "lecture1".
+* When I run `ls` with the directory "messages," it shows all the files inside of "messages." I get this output because `ls` lists all the files and folders in the given path which is "messages."
+* Thus, it is not an error.
+
+___
+# ls with a path to a file
 
 input:
 ```
@@ -79,12 +94,17 @@ output:
 ```
 Hello.java
 ```
-3. The working directory is "lecture1". When I run `ls` with file "Hello.java," it just repeats the file name "Hello.java" I get this output because there is no file "inside" of "Hello.java," and it just simply repeats the file name. It is not an error. 
+
+* The working directory is "lecture1".
+* When I run `ls` with file "Hello.java," it just repeats the file name "Hello.java" I get this output because there is no file "inside" of "Hello.java," and it just simply repeats the file name.
+* It is not an error. 
 
 
-## Examples with cat
+# Examples with cat
 
 ![Image](cat.png)
+
+## cat with no argument
 
 input:
 ```
@@ -93,7 +113,13 @@ input:
 output:
 ```
 ```
-1. The working directory here is "lecture1". When I run `cat` with no argument, it appears to be nothing and doesn't end the conversation. I get this output is because I tell the filesystem nothing to print since I put no argument after `cat`. It is not an error, but the terminal will just repeat what you type in.
+
+* The working directory here is "lecture1".
+* When I run `cat` with no argument, it appears to be nothing and doesn't end the conversation. I get this output is because I tell the filesystem nothing to print since I put no argument after `cat`.
+* It is not an error, but the terminal will just repeat what you type in.
+
+___
+# cat with a path to a directory
 
 input：
 ```
@@ -103,8 +129,13 @@ output:
 ```
 cat: messages: Is a directory
 ```
-2. The working directory here is "lecture1". When I run `cat` with directory "messages," it shows an error saying, "cat: messages: Is a directory." I got this output because  `cat` is used to "catenate" and show the exact content in a file. However, the directory "messages" contains more files instead of the exact content that can be shown. Thus, it becomes an **error**.
 
+* The working directory here is "lecture1".
+* When I run `cat` with directory "messages," it shows an error saying, "cat: messages: Is a directory." I got this output because  `cat` is used to "catenate" and show the exact content in a file. However, the directory "messages" contains more files instead of the exact content that can be shown.
+* Thus, it becomes an **error**.
+
+___
+# cat with a path to a file
 input:
 ```
 [user@sahara ~/lecture1]$ cat Hello.java
@@ -122,5 +153,8 @@ public class Hello {
     System.out.println(content);
   }
 ```
-3. The working directory here is "lecture1". When I run `cat` with the file "Hello.java," it reads the file and prints the code to the terminal. I get this output because `cat` reads the file Hello.java, which is the path I put as an argument. Thus, it is not an error.
+
+* The working directory here is "lecture1".
+* When I run `cat` with the file "Hello.java," it reads the file and prints the code to the terminal. I get this output because `cat` reads the file Hello.java, which is the path I put as an argument.
+* Thus, it is not an error.
 
