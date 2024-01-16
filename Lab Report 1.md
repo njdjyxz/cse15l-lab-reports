@@ -52,7 +52,7 @@ bash: cd: Hello.java: Not a directory
 
 ![Image](ls.png)
 
-# ls with no argument
+## ls with no argument
 
 input:
 ```
@@ -68,7 +68,7 @@ Hello.java  messages  README
 * Thus, it is not an error.
 
 ___
-# ls with a path to a directory
+## ls with a path to a directory
 
 input:
 ```
@@ -84,7 +84,7 @@ en-us.txt  es-mx.txt  zh-cn.txt
 * Thus, it is not an error.
 
 ___
-# ls with a path to a file
+## ls with a path to a file
 
 input:
 ```
@@ -119,7 +119,7 @@ output:
 * It is not an error, but the terminal will just repeat what you type in.
 
 ___
-# cat with a path to a directory
+## cat with a path to a directory
 
 input：
 ```
@@ -135,7 +135,7 @@ cat: messages: Is a directory
 * Thus, it becomes an **error**.
 
 ___
-# cat with a path to a file
+## cat with a path to a file
 input:
 ```
 [user@sahara ~/lecture1]$ cat Hello.java
