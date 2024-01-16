@@ -13,7 +13,7 @@ output:
 [user@sahara ~]$
 ```
 * Now the working directory is "home".
-* When I put no arguments after `cd ` , it  changes nothing, and the working directory shown in the next line of the terminal is still /home. I have this output because I put no path after ` cd ` which tells the filesystem to stay where it is.
+* When I put no arguments after `cd ` , it  changes nothing, and the working directory shown in the next line of the terminal is still /home. I have this output because I put no path after ` cd` which tells the filesystem to stay where it is.
 * It is not an error.
 
 ___
